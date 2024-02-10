@@ -5,7 +5,7 @@
     --primary-color: hsl(0, 0%, 0%);
     --accent-color: #007bff;
     --background-color: #f7f7f7;
-    --text-color: #ffffff;
+    --text-color: #000000;
     --font-family: 'Arial', sans-serif;
     --font-size-regular: 1rem;
     --font-size-large: 2rem;
@@ -81,7 +81,7 @@
   /* Main content styles */
   main {
     padding-top: var(--spacing-large);
-    background-color: #fafaf0;
+    background-image: url('./images/main-background.webp');
     padding-bottom: 66px;
     
   }
@@ -93,12 +93,13 @@
     max-width: 1100px;
     box-shadow: var(--box-shadow);
     margin-bottom: 80px;
+    background-color: #fafaf0 ;
   }
   
   section h2 {
     font-size: var(--font-size-large);
     color: var(--primary-color);
-    border-left: 5px solid var(--accent-color);
+    border-left: none;
     padding-left: var(--spacing-medium);
   }
   
@@ -176,13 +177,13 @@ header h1, header h2, header p, header nav a{
 }
 .container > h2 {
     position: absolute;
-    top: -49px;
-    left: 20px;
-    background: transparent;
+    /* top: -49px; */
+    /* left: 20px; */
+   
     padding-left: 20px;
     color: #27496d;
     font-size: 2.5rem;
-    border-left: 5px solid #007bff;
+    border-left: none;
     padding-left: 20px;
     margin: 0;
 
@@ -190,12 +191,6 @@ header h1, header h2, header p, header nav a{
 
 }
 
-/* Work Section */
-#work {
-    /* Your existing styles for the work section */
-
-
-}
 
 /* Projects container */
 .projects-container {
@@ -211,7 +206,9 @@ header h1, header h2, header p, header nav a{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     border-radius: 8px; /* Rounded corners */
     overflow: hidden; /* Ensures the content fits within the border radius */
-    transition: transform 0.3s ease; /* Smooth transform on hover */
+    
+    cursor: pointer;
+    position: relative;
 }
 
 .project-card:hover {
@@ -222,10 +219,17 @@ header h1, header h2, header p, header nav a{
     width: 100%; /* Ensures the image covers the card width */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensures the image covers the card area */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+/* Hover effect for project card */
+.project-card:hover img {
+    filter: brightness(120%); /* Increase brightness on hover */
 }
 
 .project-info {
     padding: 1rem; /* Padding inside the project card */
+    text-align: center;
 }
 
 .project-info h3 {
@@ -242,4 +246,37 @@ header h1, header h2, header p, header nav a{
     margin-top: 1rem; /* Space from the description to the link */
 }
 
+/* Vertical line for section containers */
+.container::before {
+    content: ''; /* Necessary for pseudo-elements */
+    position: absolute; /* Position relative to the container */
+    left: 0; /* Align to the far left of the container */
+    top: 0; /* Align to the top of the container */
+    bottom: 0; /* Stretch to the bottom of the container */
+    width: 2px; /* Width of the line */
+    background-color: var(--primary-color); /* Color of the line, using primary color variable */
+    margin-left: -20px; /* Adjust this value based on your layout's spacing */
+}
+
+/* Adjust the padding of the container to make room for the line */
+.container {
+    padding-left: var(--spacing-large); /* Increase left padding to accommodate the line */
+}
+#about > h2 {
+    left: -227px;
+    top: -3px;
+
+}
+
+#work > h2 {
+    margin-top: -3rem;
+    left: -162px;
+
+
+}
+
+#contact > h2 {
+    left: -276px;
+    top: -3px;
+}
   
