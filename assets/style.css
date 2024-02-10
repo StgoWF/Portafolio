@@ -1,42 +1,110 @@
-/* style.css */
+/* style.css - Continued development */
 
-/* Define root variables */
+/* Enhancing root variables for comprehensive styling */
 :root {
+    /* Color scheme */
+    --primary-color: #27496d; /* Dark blue for primary elements */
+    --secondary-color: #007bff; /* Light blue for secondary elements */
+    --accent-color: #ffffff; /* White for accents and contrasts */
+    --text-color: #333333; /* Dark grey for primary text */
+    --background-color: #f7f7f7; /* Light grey for page background */
+    
+    /* Typography */
+    --font-size-regular: 1rem; /* Base font size for regular text */
+    --font-size-large: 2rem; /* Larger font size for headings */
+    --font-size-small: 0.8rem; /* Smaller font size for secondary text */
 
-  }
-  
-  /* Apply the root variables */
-  body {
+    /* Spacing for layout consistency */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+
+    /* Responsive design breakpoints */
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+}
+
+/* General body styles */
+body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
-  }
-  
-  /* Typography */
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--primary-color);
-  }
-  
-  h1 {
+}
+
+/* Header styling */
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: var(--spacing-medium);
+    text-align: center;
+}
+
+.header-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Adjusting title styles */
+.title-container h1 {
+    margin: 0;
     font-size: var(--font-size-large);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: var(--breakpoint-mobile)) {
-    body {
-      background-color: var(--secondary-color); /* Just an example to change background color on mobile */
+}
+
+.title-container h2 { /* Specific style for 'Software Engineer' subtitle */
+    margin: 0;
+    font-size: var(--font-size-regular);
+    color: var(--accent-color);
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: var(--spacing-medium);
+}
+
+nav ul li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: var(--spacing-small);
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Main content area */
+main {
+    padding: var(--spacing-large);
+}
+
+section {
+    margin-bottom: var(--spacing-large);
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: var(--spacing-medium);
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: var(--breakpoint-mobile)) {
+    .header-container {
+        flex-direction: column;
     }
-    h1 {
-      font-size: var(--font-size-regular); /* Smaller font size for h1 on mobile */
+
+    nav ul {
+        flex-direction: column;
+        gap: var(--spacing-small);
     }
-  }
-  
-  @media (min-width: var(--breakpoint-tablet)) and (max-width: var(--breakpoint-desktop)) {
-    /* Styles for tablet to desktop range */
-  }
-  
-  @media (min-width: var(--breakpoint-desktop)) {
-    /* Styles for desktop and up */
-  }
-  
+}
