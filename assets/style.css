@@ -1,110 +1,143 @@
-/* style.css - Continued development */
+/* style.css */
 
-/* Enhancing root variables for comprehensive styling */
+/* Define root variables for colors, fonts, and spacing */
 :root {
-    /* Color scheme */
-    --primary-color: #27496d; /* Dark blue for primary elements */
-    --secondary-color: #007bff; /* Light blue for secondary elements */
-    --accent-color: #ffffff; /* White for accents and contrasts */
-    --text-color: #333333; /* Dark grey for primary text */
-    --background-color: #f7f7f7; /* Light grey for page background */
-    
-    /* Typography */
-    --font-size-regular: 1rem; /* Base font size for regular text */
-    --font-size-large: 2rem; /* Larger font size for headings */
-    --font-size-small: 0.8rem; /* Smaller font size for secondary text */
-
-    /* Spacing for layout consistency */
+    --primary-color: #27496d;
+    --accent-color: #007bff;
+    --background-color: #f7f7f7;
+    --text-color: #ffffff;
+    --font-family: 'Arial', sans-serif;
+    --font-size-regular: 1rem;
+    --font-size-large: 2rem;
     --spacing-small: 0.5rem;
     --spacing-medium: 1rem;
     --spacing-large: 2rem;
-
-    /* Responsive design breakpoints */
-    --breakpoint-mobile: 480px;
-    --breakpoint-tablet: 768px;
-    --breakpoint-desktop: 1024px;
-}
-
-/* General body styles */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: var(--text-color);
+    --border-radius: 50%;
+    --box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Base styles, using variables */
+  body, html {
+    font-family: var(--font-family);
     background-color: var(--background-color);
-}
-
-/* Header styling */
-header {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
+    color: var(--text-color);
+  }
+  
+  /* Header styles */
+  header {
+    background-image: url('../assets/images/header-image.webp');
     padding: var(--spacing-medium);
-    text-align: center;
-}
-
-.header-container {
-    max-width: 960px;
-    margin: 0 auto;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-/* Adjusting title styles */
-.title-container h1 {
-    margin: 0;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 var(--spacing-medium);
+  }
+  
+  .header-photo {
+    border-radius: var(--border-radius);
+    width: 200px; /* smaller than the original 240px to align with the name */
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid var(--text-color);
+    margin-right: var(--spacing-medium);
+  }
+  
+  .title-nav h1 {
+    color: var(--primary-color);
     font-size: var(--font-size-large);
-}
-
-.title-container h2 { /* Specific style for 'Software Engineer' subtitle */
-    margin: 0;
-    font-size: var(--font-size-regular);
-    color: var(--accent-color);
-}
-
-/* Navigation styles */
-nav ul {
+    margin-right: var(--spacing-large);
+  }
+  
+  /* Navigation styles */
+  nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     gap: var(--spacing-medium);
-}
-
-nav ul li a {
-    color: var(--accent-color);
+  }
+  
+  nav ul li a {
     text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
     padding: var(--spacing-small);
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--secondary-color);
-}
-
-/* Main content area */
-main {
-    padding: var(--spacing-large);
-}
-
-section {
-    margin-bottom: var(--spacing-large);
-}
-
-/* Footer styling */
-footer {
-    background-color: var(--secondary-color);
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
     color: var(--accent-color);
-    padding: var(--spacing-medium);
+  }
+  
+  /* Main content styles */
+  main {
+    padding-top: var(--spacing-large);
+    background-image: url('../assets/images/main-background.webp');
+  }
+  
+  section {
+    background-color: var(--text-color);
+    padding: var(--spacing-large);
+    margin: var(--spacing-large) auto;
+    max-width: 1100px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  section h2 {
+    font-size: var(--font-size-large);
+    color: var(--primary-color);
+    border-left: 5px solid var(--accent-color);
+    padding-left: var(--spacing-medium);
+  }
+  
+  .section-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .section-line {
+    background-color: var(--accent-color);
+    margin-right: var(--spacing-medium);
+  }
+  
+  .section-text p {
+    font-size: var(--font-size-regular);
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-image: url('../assets/images/footer-image.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
-}
-
-/* Responsive adjustments */
-@media (max-width: var(--breakpoint-mobile)) {
-    .header-container {
-        flex-direction: column;
+    padding: var(--spacing-medium) 0;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      align-items: center;
     }
-
+  
+    .title-nav h1 {
+      margin-top: var(--spacing-small);
+    }
+  
     nav ul {
-        flex-direction: column;
-        gap: var(--spacing-small);
+      flex-direction: column;
+      gap: var(--spacing-small);
     }
-}
+  
+    nav ul li a {
+      padding: var(--spacing-small) var(--spacing-medium);
+    }
+  }
+  
