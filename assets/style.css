@@ -1,0 +1,42 @@
+/* style.css */
+
+/* Define root variables */
+:root {
+
+  }
+  
+  /* Apply the root variables */
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+  }
+  
+  h1 {
+    font-size: var(--font-size-large);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: var(--breakpoint-mobile)) {
+    body {
+      background-color: var(--secondary-color); /* Just an example to change background color on mobile */
+    }
+    h1 {
+      font-size: var(--font-size-regular); /* Smaller font size for h1 on mobile */
+    }
+  }
+  
+  @media (min-width: var(--breakpoint-tablet)) and (max-width: var(--breakpoint-desktop)) {
+    /* Styles for tablet to desktop range */
+  }
+  
+  @media (min-width: var(--breakpoint-desktop)) {
+    /* Styles for desktop and up */
+  }
+  
