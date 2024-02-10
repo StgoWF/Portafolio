@@ -38,6 +38,11 @@
     margin: auto;
     padding: 0 var(--spacing-medium);
   }
+
+  .avatar-name-container {
+    display: flex;
+    align-items: center; /* Vertically align items */
+}
   
   .header-photo {
     border-radius: var(--border-radius);
@@ -140,4 +145,10 @@
       padding: var(--spacing-small) var(--spacing-medium);
     }
   }
+
+  .name-container h1 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin: 0; /* Remove default margin */
+}
   
