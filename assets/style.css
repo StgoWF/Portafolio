@@ -21,6 +21,8 @@
     font-family: var(--font-family);
     background-color: var(--background-color);
     color: var(--text-color);
+    max-width: 100%;
+    overflow-x: hidden; 
   }
   
   /* Header styles */
@@ -28,6 +30,7 @@
     background-image: url('../assets/images/header-image.webp');
     padding: var(--spacing-medium);
     box-shadow: var(--box-shadow);
+    
   }
   
   .header-content {
@@ -81,19 +84,24 @@
   /* Main content styles */
   main {
     padding-top: var(--spacing-large);
-    background-image: url('./images/main-background.webp');
+    /* background-image: url('./images/main-background.webp'); */
     padding-bottom: 66px;
+    background-color: #fafaf0;
+
+    
     
   }
   
   section {
-    position: relative;;
+    position: relative;
     padding: var(--spacing-large);
     margin: var(--spacing-large) auto;
-    max-width: 1100px;
     box-shadow: var(--box-shadow);
     margin-bottom: 80px;
-    background-color: #fafaf0 ;
+    background-color: #fafaf0;
+    max-width: 786px;
+    right: -132px;
+
   }
   
   section h2 {
@@ -106,6 +114,7 @@
   .section-content {
     display: flex;
     align-items: center;
+    max-width: 800px;
   }
   
   .section-line {
@@ -126,7 +135,8 @@
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    padding: 100px;
+    padding: 25px;
+    
   }
   
   /* Responsive styles */
@@ -169,7 +179,7 @@ header h2 {
 }
 /* Apply a background to all text within header, nav, and section */
 header h1, header h2, header p, header nav a{
-    background-color: #e2e2e2;; /* Black background */
+    background-color: #ffffff;; /* White background */
     color: var(--primary-color); 
     padding: 0.2rem; /* Padding for spacing */
     display: inline-block; /* Make the background only as wide as the text */
@@ -217,7 +227,7 @@ header h1, header h2, header p, header nav a{
 
 .project-card img {
     width: 100%; /* Ensures the image covers the card width */
-    height: auto; /* Maintain aspect ratio */
+    height: 244px; /* Maintain aspect ratio */
     object-fit: cover; /* Ensures the image covers the card area */
     transition: transform 0.3s ease; /* Smooth transform on hover */
 }
@@ -263,20 +273,69 @@ header h1, header h2, header p, header nav a{
     padding-left: var(--spacing-large); /* Increase left padding to accommodate the line */
 }
 #about > h2 {
-    left: -227px;
+    left: -171px;
     top: -3px;
+    text-align: center;
 
 }
 
 #work > h2 {
-    margin-top: -3rem;
+    
     left: -162px;
 
 
 }
 
 #contact > h2 {
-    left: -276px;
+    left: -217px;
     top: -3px;
+    text-align: center;
 }
   
+/* ... your existing styles ... */
+
+/* Existing media query for medium screens (tablets) */
+@media (max-width: 768px) {
+    /* Your existing styles for medium screens */
+    /* Add or adjust styles as needed */
+    .container {
+        max-width: 600px; /* Adjust the max-width as needed */
+        padding: var(--spacing-medium); /* Adjust padding as needed */
+    }
+    
+    /* Styles to stack the header content vertically */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust font sizes, spacing, etc. */
+    h1, h2, p {
+        font-size: smaller; /* Example to reduce font size */
+    }
+}
+
+/* Existing or new media query for small screens (mobiles) */
+@media (max-width: 480px) {
+    /* Your existing styles for small screens */
+    /* Add or adjust styles as needed */
+    .container {
+        max-width: 100%; /* Container takes the full width */
+        padding: var(--spacing-small); /* Reduce padding for small screens */
+    }
+    
+    /* Further adjustments for header content on small screens */
+    .header-content {
+        /* Your styles for mobile header */
+    }
+
+    /* Adjust font sizes, spacing, etc. for mobile view */
+    h1, h2, p {
+        font-size: even smaller; /* Example to reduce font size further */
+    }
+}
+
+section h2 span {
+    display: block; 
+}
+
