@@ -1,0 +1,34 @@
+/* reset.css */
+
+/* Apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    height: 100%; /* Ensures the root element takes full height of the viewport */
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit; /* Inherits the box-sizing from html element */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+  }
+  
+  /* Reset default font sizes for headings and text elements */
+  h1, h2, h3, h4, h5, h6,
+  input, select, option, optgroup, textarea, button,
+  pre, code {
+    font-size: 100%; /* Sets font-size to default browser size */
+    font-family: inherit; /* Inherits font-family from parent elements */
+  }
+  
+  /* Remove list styles for ordered and unordered lists */
+  ol, ul {
+    list-style: none; /* Removes default list style */
+  }
+  
+  /* Set a default line-height and font-family for the body */
+  body {
+    min-height: 100%; /* Minimum height to be 100% of the viewport height */
+    line-height: 1; /* Sets a normalized line-height */
+    font-family: sans-serif; /* Sets a default font-family */
+  }
+  
