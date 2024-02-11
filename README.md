@@ -16,7 +16,7 @@ This portfolio showcases my web development projects and skills, emphasizing adv
 
 ## Live Demo
 
-Check out the live portfolio [here](https://stgowf.github.io/proyect-2/).
+Check out the live portfolio [here](https://stgowf.github.io/Proyect-2/).
 
 ## Usage
 
