@@ -100,7 +100,7 @@
     margin-bottom: 80px;
     background-color: #fafaf0;
     max-width: 786px;
-    right: -132px;
+    right: -85px;
 
   }
   
@@ -135,9 +135,21 @@
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    padding: 25px;
+    
     
   }
+
+  /* Styles for paragraph within footer */
+    footer p {
+    font-size: 1rem; /* Font size */
+    color: #fff; /* Text color */
+    text-align: center; /* Text alignment */
+    padding: 20px 0; /* Padding above and below */
+    margin: 0; /* Removes any default margin */
+  }
+
+
+  
   
   /* Responsive styles */
   @media (max-width: 768px) {
@@ -287,12 +299,12 @@ header h1, header h2, header p, header nav a{
 }
 
 #contact > h2 {
-    left: -217px;
+    left: -510px;
     top: -3px;
     text-align: center;
 }
   
-/* ... your existing styles ... */
+
 
 /* Existing media query for medium screens (tablets) */
 @media (max-width: 768px) {
@@ -339,3 +351,35 @@ section h2 span {
     display: block; 
 }
 
+/* Styles for contact section */
+.contact-me {
+    display: flex; /* Aligns items in a row */
+    flex-wrap: wrap; /* Allows items to wrap to the next line on small screens */
+    gap: 20px; /* Space between items */
+    justify-content: space-around; /* Distributes space around items */
+    padding: 20px; /* Padding around the contact section */
+}
+
+.contact-me h2 {
+    width: 100%; /* Full width to enforce line break */
+    text-align: center; /* Centers the title */
+}
+
+/* Style for contact details like email and GitHub */
+.contact-me p {
+    margin: 0; /* Removes default margin */
+    font-size: 1.2rem; /* Larger font size for visibility */
+}
+
+/* Style for links to make them easily clickable */
+.contact-me a {
+    color: #0066cc; /* Color for links */
+    text-decoration: none; /* Removes underline */
+    padding: 5px; /* Padding for larger clickable area */
+    transition: color 0.2s; /* Smooth transition for color change */
+}
+
+/* Hover effect for links */
+.contact-me a:hover {
+    color: #004499; /* Darker shade on hover for visibility */
+}
